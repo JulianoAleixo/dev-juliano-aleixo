@@ -1,3 +1,4 @@
+import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
 
 const App = () => {
@@ -6,7 +7,7 @@ const App = () => {
             <Navbar />
             {/* Content */}
             <div className="flex-1 overflow-y-auto">
-                {/* <Hero /> */}
+                <Hero />
                 <div className="divider" id="academics" />
                 <div className="divider" id="office" />
                 <div className="divider" id="location" />
