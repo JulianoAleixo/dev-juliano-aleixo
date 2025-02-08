@@ -27,7 +27,7 @@ const Hero = () => {
         <div className="hero bg-base-200 min-h-full">
             <div className="hero-content text-center">
                 <div className="max-w-lg">
-                    <h1 className="text-5xl font-bold">
+                    <h1 className="text-4xl lg:text-6xl font-bold">
                         {displayText}
                         <span className={`align-text-top ${showCursor ? "inline" : "invisible"}`}>
                             |
