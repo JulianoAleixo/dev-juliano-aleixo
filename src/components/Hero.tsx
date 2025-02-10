@@ -4,7 +4,6 @@ import { useLanguage } from "../context/LanguageContext";
 const Hero = () => {
     const { t } = useLanguage();
 
-    const text = "Hello World...";
     const [displayText, setDisplayText] = useState("");
     const [index, setIndex] = useState(0);
     const [showCursor, setShowCursor] = useState(true);
