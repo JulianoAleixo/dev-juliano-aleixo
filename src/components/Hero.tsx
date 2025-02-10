@@ -1,20 +1,28 @@
 import { useEffect, useState } from "react";
+import { useLanguage } from "../context/LanguageContext";
 
 const Hero = () => {
+    const { t } = useLanguage();
+
     const text = "Hello World...";
     const [displayText, setDisplayText] = useState("");
     const [index, setIndex] = useState(0);
     const [showCursor, setShowCursor] = useState(true);
 
     useEffect(() => {
-        if (index < text.length) {
+        setDisplayText("");
+        setIndex(0);
+    }, [t("hero_text")]);
+
+    useEffect(() => {
+        if (index < t("hero_text").length) {
             const timeout = setTimeout(() => {
-                setDisplayText((prev) => prev + text[index]);
+                setDisplayText((prev) => prev + t("hero_text")[index]);
                 setIndex((prev) => prev + 1);
             }, 200);
             return () => clearTimeout(timeout);
         }
-    }, [index, text]);
+    }, [index, t]);
 
     useEffect(() => {
         const cursorInterval = setInterval(() => {
@@ -24,20 +32,29 @@ const Hero = () => {
     }, []);
 
     return (
-        <div className="hero bg-base-200 min-h-full">
+        <div className="hero bg-base-200 min-h-full" id="hero">
             <div className="hero-content text-center">
                 <div className="max-w-lg">
                     <h1 className="text-4xl lg:text-6xl font-bold">
                         {displayText}
-                        <span className={`align-text-top ${showCursor ? "inline" : "invisible"}`}>
+                        <span
+                            className={`align-text-top ${
+                                showCursor ? "inline" : "invisible"
+                            }`}
+                        >
                             |
                         </span>
                     </h1>
                     <p className="mt-2 mb-8 py-6 lg:text-xl">
-                        I'm Juliano, a Front-End Developer.<br />
-                        <span className="font-bold text-primary text-xl lg:text-2xl">Welcome to my portfolio!</span>
+                        {t("hero_intro")}
+                        <br />
+                        <span className="font-bold text-primary text-xl lg:text-2xl">
+                            {t("hero_welcome")}
+                        </span>
                     </p>
-                    <button className="btn btn-primary text-lg text-white p-6">See Projects</button>
+                    <button className="btn btn-primary text-lg text-white p-6">
+                        {t("hero_btn")}
+                    </button>
                 </div>
             </div>
             <div className="flex justify-center self-end pb-6">

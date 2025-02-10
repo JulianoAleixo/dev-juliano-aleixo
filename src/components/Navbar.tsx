@@ -1,23 +1,49 @@
+import { Languages } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useLanguage } from "../context/LanguageContext";
+import { Language } from "../locales/translations";
 
 const Navbar = () => {
+    const { language, setLanguage, t } = useLanguage();
+
     const [theme, setTheme] = useState<string>(
         localStorage.getItem("theme") ?? "lemonade"
     );
 
-    const handleToggle = (e: React.ChangeEvent<HTMLInputElement>) => {
-        if (e.target.checked) {
-            setTheme("forest");
-        } else {
-            setTheme("lemonade");
+    const languages = [
+        { code: "en", label: "English" },
+        { code: "pt-BR", label: "Português" },
+    ];
+
+    const handleChangeTheme = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setTheme(e.target.checked ? "forest" : "lemonade");
+    };
+
+    const handleChangeLanguage = (lang: Language) => {
+        setLanguage(lang);
+    };
+
+    const handleScroll = (
+        event: React.MouseEvent<HTMLAnchorElement>,
+        sectionId: string
+    ) => {
+        event.preventDefault();
+        const sectionElement = document.querySelector(`#${sectionId}`);
+        if (sectionElement) {
+            sectionElement.scrollIntoView({
+                behavior: "smooth",
+            });
         }
     };
 
     useEffect(() => {
         localStorage.setItem("theme", theme);
-        const localTheme = localStorage.getItem("theme") ?? "lemonade";
-        document.querySelector("html")?.setAttribute("data-theme", localTheme);
+        document.querySelector("html")?.setAttribute("data-theme", theme);
     }, [theme]);
+
+    useEffect(() => {
+        localStorage.setItem("language", language);
+    }, [language]);
 
     return (
         <div className="navbar bg-base-100 shadow-sm">
@@ -49,55 +75,87 @@ const Navbar = () => {
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
                     >
                         <li>
-                            <a>Item 1</a>
+                            <a>{t("projects_btn")}</a>
                         </li>
                         <li>
-                            <a>Parent</a>
-                            <ul className="p-2">
-                                <li>
-                                    <a>Submenu 1</a>
-                                </li>
-                                <li>
-                                    <a>Submenu 2</a>
-                                </li>
-                            </ul>
+                            <a>{t("about_btn")}</a>
                         </li>
                         <li>
-                            <a>Item 3</a>
+                            <a>{t("journey_btn")}</a>
+                        </li>
+                        <li>
+                            <a>{t("skills_btn")}</a>
                         </li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+                <a
+                    className="btn btn-ghost text-xl lg:text-2xl font-bold text-primary"
+                    onClick={(e) => handleScroll(e, "hero")}
+                >
+                    {"<Juliano />"}
+                </a>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal px-1 gap-2">
                     <li>
-                        <a>Item 1</a>
+                        <a className="btn btn-ghost rounded-btn text-lg">
+                            {t("projects_btn")}
+                        </a>
                     </li>
                     <li>
-                        <details>
-                            <summary>Parent</summary>
-                            <ul className="p-2">
-                                <li>
-                                    <a>Submenu 1</a>
-                                </li>
-                                <li>
-                                    <a>Submenu 2</a>
-                                </li>
-                            </ul>
-                        </details>
+                        <a className="btn btn-ghost rounded-btn text-lg">
+                            {t("about_btn")}
+                        </a>
                     </li>
                     <li>
-                        <a>Item 3</a>
+                        <a className="btn btn-ghost rounded-btn text-lg">
+                            {t("journey_btn")}
+                        </a>
+                    </li>
+                    <li>
+                        <a className="btn btn-ghost rounded-btn text-lg">
+                            {t("skills_btn")}
+                        </a>
                     </li>
                 </ul>
             </div>
             <div className="navbar-end">
-                <div className="flex-none px-4">
+                <div className="dropdown dropdown-end">
+                    <div
+                        tabIndex={0}
+                        role="button"
+                        className="btn btn-ghost rounded-btn"
+                    >
+                        <Languages />
+                    </div>
+                    <ul
+                        tabIndex={0}
+                        className="menu dropdown-content bg-base-100 rounded-box z-[1] mt-4 w-40 p-2 shadow gap-2"
+                    >
+                        {languages.map(({ code, label }) => (
+                            <li
+                                key={code}
+                                className={`flex flex-row items-center gap-1 cursor-pointer px-3 py-1 rounded-lg transition-colors hover:bg-neutral/20 ${
+                                    language === code
+                                        ? "bg-neutral text-white"
+                                        : ""
+                                }`}
+                                onClick={() => handleChangeLanguage(code as Language)}
+                            >
+                                <div className="badge badge-outline w-10 text-center">
+                                    {code.toUpperCase().slice(0, 2)}
+                                </div>
+                                {label}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
+                <div className="flex-none px-4 btn btn-ghost rounded-btn">
                     <label className="swap swap-rotate">
                         <input
                             type="checkbox"
-                            onChange={handleToggle}
+                            onChange={handleChangeTheme}
                             checked={theme !== "lemonade"}
                         />
 
