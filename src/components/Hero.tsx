@@ -33,8 +33,11 @@ const Hero = () => {
                             |
                         </span>
                     </h1>
-                    <p className="py-6">Welcome to my portfolio!</p>
-                    <button className="btn btn-primary">See Projects</button>
+                    <p className="mt-2 mb-8 py-6 lg:text-xl">
+                        I'm Juliano, a Front-End Developer.<br />
+                        <span className="font-bold text-primary text-xl lg:text-2xl">Welcome to my portfolio!</span>
+                    </p>
+                    <button className="btn btn-primary text-lg text-white p-6">See Projects</button>
                 </div>
             </div>
             <div className="flex justify-center self-end pb-6">
