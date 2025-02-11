@@ -137,12 +137,21 @@ const Navbar = () => {
                                 key={code}
                                 className={`flex flex-row items-center gap-1 cursor-pointer px-3 py-1 rounded-lg transition-colors hover:bg-neutral/20 ${
                                     language === code
-                                        ? "bg-neutral text-white"
+                                        ? "bg-neutral/80 text-white hover:bg-neutral/60"
                                         : ""
                                 }`}
-                                onClick={() => handleChangeLanguage(code as Language)}
+                                onClick={() =>
+                                    handleChangeLanguage(code as Language)
+                                }
                             >
-                                <div className="badge badge-outline w-10 text-center">
+                                {/* <div className="badge badge-outline w-10 text-center"> */}
+                                <div
+                                    className={`badge badge-outline w-10 text-center ${
+                                        language === code
+                                            ? "!border-white !text-white"
+                                            : ""
+                                    }`}
+                                >
                                     {code.toUpperCase().slice(0, 2)}
                                 </div>
                                 {label}
