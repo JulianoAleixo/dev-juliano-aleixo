@@ -144,7 +144,6 @@ const Navbar = () => {
                                     handleChangeLanguage(code as Language)
                                 }
                             >
-                                {/* <div className="badge badge-outline w-10 text-center"> */}
                                 <div
                                     className={`badge badge-outline w-10 text-center ${
                                         language === code
