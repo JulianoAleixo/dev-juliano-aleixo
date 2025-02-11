@@ -1,5 +1,6 @@
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import Summary from "./components/Summary";
 import { LanguageProvider } from "./context/LanguageContext";
 
 const App = () => {
@@ -10,7 +11,7 @@ const App = () => {
                 {/* Content */}
                 <div className="flex-1 overflow-y-auto">
                     <Hero />
-                    {/* <Sumary />  -> redirects to contact*/}
+                    <Summary />
                     <div className="divider" id="" />
                     {/* <Projects /> */}
                     <div className="divider" id="" />
