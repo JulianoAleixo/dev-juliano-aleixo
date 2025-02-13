@@ -73,7 +73,7 @@ const MockupCode = () => {
     }, []);
 
     return (
-        <div className="mockup-code max-w-full text-base bg-zinc-800">
+        <div className="mockup-code max-w-full flex flex-col flex-grow text-base lg:text-lg bg-zinc-800 h-full w-full flex-1">
             <pre className="flex my-3">
                 <span className="pr-4 text-gray-400">1</span>
                 <code className="whitespace-pre-wrap break-words">

@@ -30,6 +30,19 @@ const Hero = () => {
         return () => clearInterval(cursorInterval);
     }, []);
 
+    const handleScroll = (
+        event: React.MouseEvent<HTMLSpanElement>,
+        sectionId: string
+    ) => {
+        event.preventDefault();
+        const sectionElement = document.querySelector(`#${sectionId}`);
+        if (sectionElement) {
+            sectionElement.scrollIntoView({
+                behavior: "smooth",
+            });
+        }
+    };
+
     return (
         <div className="hero bg-base-200 min-h-full" id="hero">
             <div className="hero-content text-center">
@@ -57,7 +70,7 @@ const Hero = () => {
                 </div>
             </div>
             <div className="flex justify-center self-end pb-6">
-                <span className="animate-bounce text-2xl">
+                <span className="animate-bounce text-2xl cursor-pointer" onClick={(e) => handleScroll(e, "summary")}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="48"
