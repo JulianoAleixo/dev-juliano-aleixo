@@ -6,7 +6,7 @@ const Summary = () => {
     const { t, language } = useLanguage();
 
     return (
-        <div className="hero bg-base-200 min-h-full py-4" id="summary">
+        <div className="hero bg-base-200 min-h-full py-4 lg:px-40" id="summary">
             <div className="border-y-3 border-base-100 lg:py-8">
                 <div className="hero-content w-full flex-col lg:flex-row-reverse gap-12 items-stretch">
                     <img

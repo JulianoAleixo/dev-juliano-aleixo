@@ -75,7 +75,9 @@ const Navbar = () => {
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
                     >
                         <li>
-                            <a>{t("projects_btn")}</a>
+                            <a onClick={(e) => handleScroll(e, "projects")}>
+                                {t("projects_btn")}
+                            </a>
                         </li>
                         <li>
                             <a>{t("about_btn")}</a>
@@ -98,7 +100,7 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-2">
                     <li>
-                        <a className="btn btn-ghost rounded-btn text-lg">
+                        <a onClick={(e) => handleScroll(e, "projects")} className="btn btn-ghost rounded-btn text-lg">
                             {t("projects_btn")}
                         </a>
                     </li>
