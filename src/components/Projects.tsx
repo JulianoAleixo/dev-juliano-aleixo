@@ -42,11 +42,11 @@ const Projects = () => {
                             url={project.url}
                             image={project.image}
                         />
-                        <div>
+                        <div className="!max-w-2/5 self-center">
                             <Slider
                                 images={[...project.technologies]}
-                                width={100}
-                                height={100}
+                                width={40}
+                                height={40}
                                 reverse
                             />
                         </div>
@@ -57,33 +57,6 @@ const Projects = () => {
                     </div>
                 </div>
             ))}
-
-            {/* <div
-                tabIndex={0}
-                className="collapse collapse-open bg-base-200 border border-base-300"
-            >
-                <div className="collapse-title font-semibold">[project_name]</div>
-                <div className="collapse-content text-sm flex flex-col">
-                    [project_description]
-                    <MockupBrowser />
-                    
-                    <div>
-                        <Slider
-                            images={[...Array(9)].map(
-                                (_, i) => `../src/assets/img/slider2_${i + 1}.png`
-                            )}
-                            width={100}
-                            height={100}
-                            reverse
-                        />
-                    </div>
-
-                    <button className="btn btn-primary self-center text-lg text-white center mt-6">
-                        Access
-                        <Link />
-                    </button>
-                </div>
-            </div> */}
         </div>
     );
 };
