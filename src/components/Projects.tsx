@@ -1,6 +1,7 @@
 import { Link } from "lucide-react";
 import MockupBrowser from "./MockupBrowser";
 import Slider from "./Slider";
+import { useEffect, useState } from "react";
 
 const projects = [
     {
@@ -13,50 +14,74 @@ const projects = [
             "react",
             "typescript",
             "tailwindcss",
-            "daisyui",
             "vite",
             "vercel",
+            "daisyui",
         ],
     },
 ];
 
 const Projects = () => {
+    const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+    useEffect(() => {
+        const checkScreenSize = () => {
+            setIsLargeScreen(window.innerWidth >= 1024);
+        };
+
+        checkScreenSize();
+        window.addEventListener("resize", checkScreenSize);
+
+        return () => window.removeEventListener("resize", checkScreenSize);
+    }, []);
+
     return (
         <div className="px-4 lg:px-40 min-h-full">
             <h2 className="text-center text-primary text-2xl lg:text-3xl font-bold pb-8">
                 Projects
             </h2>
 
-            {projects.map((project, index) => (
-                // TODO: Make it responsive
-                <div
-                    tabIndex={index}
-                    className="collapse collapse-open bg-base-200 border border-base-300"
-                >
-                    <div className="collapse-title font-semibold">
-                        {project.name}
-                    </div>
-                    <div className="collapse-content text-sm flex flex-col">
-                        {project.description}
-                        <MockupBrowser
-                            url={project.url}
-                            image={project.image}
-                        />
-                        <div className="!max-w-2/5 self-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
+                {projects.map((project, index) => (
+                    <div
+                        key={index}
+                        tabIndex={0}
+                        className={`border border-base-300 bg-base-200 ${
+                            isLargeScreen
+                                ? "collapse collapse-open"
+                                : "collapse collapse-arrow"
+                        }`}
+                    >
+                        <div className="collapse-title lg:text-lg text-secondary font-semibold lg:px-10">
+                            {project.name}
+                        </div>
+                        <div className="collapse-content text-sm flex flex-col lg:px-10 overflow-auto">
+                            {project.description}
+                            <MockupBrowser
+                                url={project.url}
+                                image={project.image}
+                            />
+
                             <Slider
                                 images={[...project.technologies]}
                                 width={40}
                                 height={40}
                                 reverse
                             />
+
+                            <a
+                                className="btn btn-primary self-center text-lg text-white center mt-6"
+                                href={project.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Access
+                                <Link />
+                            </a>
                         </div>
-                        <button className="btn btn-primary self-center text-lg text-white center mt-6">
-                            Access
-                            <Link />
-                        </button>
                     </div>
-                </div>
-            ))}
+                ))}
+            </div>
         </div>
     );
 };

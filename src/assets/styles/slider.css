@@ -12,7 +12,7 @@
 .auto-slider .auto-slider-list {
     display: flex;
     width: 100%;
-    min-width: calc(var(--width) * var(--quantity));
+    min-width: 100%;
     position: relative;
 }
 .auto-slider .auto-slider-list .auto-slider-item {
@@ -55,8 +55,11 @@
         left: 100%;
     }
 }
-
-
-.abobrinha {
-    background: #f00;
+.auto-slider-mask-image {
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 90%,
+        transparent
+    );
 }
