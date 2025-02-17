@@ -19,6 +19,21 @@ const projects = [
             "daisyui",
         ],
     },
+    {
+        name: "Node Agenda",
+        description:
+            "Um site feito para estudar a estrutura MVC usando Node.JS.",
+        url: "https://node-agenda.vercel.app",
+        image: "node-agenda",
+        technologies: [
+            "nodejs",
+            "javascript",
+            "ejs",
+            "bootstrap",
+            "vercel",
+            "mongodb",
+        ],
+    },
 ];
 
 const Projects = () => {
