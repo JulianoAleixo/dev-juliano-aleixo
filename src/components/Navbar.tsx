@@ -3,12 +3,13 @@ import { useEffect, useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { Language } from "../locales/translations";
 
-const Navbar = () => {
-    const { language, setLanguage, t } = useLanguage();
+interface NavbarProps {
+    theme: string;
+    setTheme: (theme: string) => void;
+}
 
-    const [theme, setTheme] = useState<string>(
-        localStorage.getItem("theme") ?? "forest"
-    );
+const Navbar = ({ theme, setTheme }: NavbarProps) => {
+    const { language, setLanguage, t } = useLanguage();
 
     const languages = [
         { code: "en", label: "English" },

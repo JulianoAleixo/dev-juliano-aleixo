@@ -3,6 +3,10 @@ import MockupBrowser from "./MockupBrowser";
 import Slider from "./Slider";
 import { useEffect, useState } from "react";
 
+interface ProjectsProps {
+    theme: string;
+}
+
 const projects = [
     {
         name: "Theme Changer DaisyUI",
@@ -36,7 +40,7 @@ const projects = [
     },
 ];
 
-const Projects = () => {
+const Projects = ({ theme }: ProjectsProps) => {
     const [isLargeScreen, setIsLargeScreen] = useState(false);
 
     useEffect(() => {
@@ -78,6 +82,7 @@ const Projects = () => {
                             />
 
                             <Slider
+                                theme={theme}
                                 images={[...project.technologies]}
                                 width={40}
                                 height={40}

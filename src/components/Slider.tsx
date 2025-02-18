@@ -1,11 +1,12 @@
 import "../assets/styles/slider.css";
-import React from "react";
+import React, { useState } from "react";
 
 interface SliderProps {
     images: string[];
     width: number;
     height: number;
     reverse?: boolean;
+    theme: string;
 }
 
 const Slider: React.FC<SliderProps> = ({
@@ -13,9 +14,14 @@ const Slider: React.FC<SliderProps> = ({
     width,
     height,
     reverse = false,
+    theme
 }) => {
     return (
-        <div className="bg-zinc-800 py-2 auto-slider-mask-image">
+        <div
+            className={`py-2 auto-slider-mask-image ${
+                theme === "forest" ? "bg-zinc-800 " : "bg-zinc-300"
+            }`}
+        >
             <div
                 className="auto-slider self-center w-full"
                 style={
