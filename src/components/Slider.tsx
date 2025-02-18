@@ -1,5 +1,4 @@
 import "../assets/styles/slider.css";
-import React, { useState } from "react";
 
 interface SliderProps {
     images: string[];

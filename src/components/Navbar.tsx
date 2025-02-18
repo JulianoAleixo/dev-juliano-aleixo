@@ -1,5 +1,5 @@
 import { Languages } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { Language } from "../locales/translations";
 
