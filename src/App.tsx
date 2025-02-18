@@ -2,6 +2,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Summary from "./components/Summary";
+import Footer from "./components/Footer";
 import { LanguageProvider } from "./context/LanguageContext";
 
 const App = () => {
@@ -21,8 +22,7 @@ const App = () => {
                     {/* <Journey /> */}
                     <div className="divider" />
                     {/* <Skills /> */}
-                    <div className="divider" />
-                    {/* <Footer /> */}
+                    <Footer />
                 </div>
             </div>
         </LanguageProvider>
