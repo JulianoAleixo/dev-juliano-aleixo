@@ -10,7 +10,7 @@ const Summary = () => {
             <div className="border-y-3 border-base-100 lg:py-8">
                 <div className="hero-content w-full flex-col lg:flex-row-reverse gap-12 items-stretch">
                     <img
-                        src="../src/assets/img/profile_pic.JPG"
+                        src="/img/profile_pic.JPG"
                         className="max-w-56 lg:max-w-sm rounded-lg shadow-2xl mx-8 lg:w-1/4 object-cover"
                         draggable="false"
                     />

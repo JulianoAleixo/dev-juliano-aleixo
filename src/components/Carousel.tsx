@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const images = [
-    "/img/carousel01.jpg",
+    "/img/carousel01.JPG",
     "/img/carousel02.jpg",
     "/img/carousel03.jpg",
 ];
@@ -31,7 +31,7 @@ const Carousel = () => {
         return () => clearInterval(interval);
     }, [currentIndex]);
     return (
-        <div className="flex flex-col flex-1 justify-center my-8">
+        <div className="flex flex-col flex-1 justify-center m-auto">
                 <div className="relative w-full mx-auto aspect-video lg:max-w-3xl overflow-hidden">
                     <div
                         className="flex transition-transform ease-out duration-500"

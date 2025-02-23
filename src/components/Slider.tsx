@@ -44,7 +44,7 @@ const Slider: React.FC<SliderProps> = ({
                             }
                         >
                             <img
-                                src={`../src/assets/img/${image}.png`}
+                                src={`/img/${image}.png`}
                                 alt={`${
                                     image.charAt(0).toUpperCase() +
                                     image.slice(1)

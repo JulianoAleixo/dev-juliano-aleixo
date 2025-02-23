@@ -6,7 +6,7 @@ interface MockupBrowserProps {
 }
 
 const MockupBrowser: React.FC<MockupBrowserProps> = ({ url, image }) => {
-    const imagePath = `../src/assets/img/${image}.png`;
+    const imagePath = `/img/${image}.png`;
 
     return (
         <div className="mockup-browser bg-zinc-800 border border-base-300 w-full max-w-full my-4 lg:my-8" data-theme="forest">
