@@ -5,6 +5,7 @@ import Projects from "./components/Projects";
 import Summary from "./components/Summary";
 import Footer from "./components/Footer";
 import { LanguageProvider } from "./context/LanguageContext";
+import About from "./components/About";
 
 const App = () => {
     const [theme, setTheme] = useState<string>(
@@ -27,7 +28,7 @@ const App = () => {
                     <div className="divider" id="projects" />
                     <Projects theme={theme} />
                     <div className="divider" id="" />
-                    {/* <About />*/}
+                    <About />
                     <div className="divider" id="" />
                     {/* <Journey /> */}
                     <div className="divider" />
