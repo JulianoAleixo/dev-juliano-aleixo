@@ -1,7 +1,10 @@
 import { Download } from "lucide-react";
 import Carousel from "./Carousel";
+import { useLanguage } from "../context/LanguageContext";
 
 const About = () => {
+    const { t } = useLanguage();
+
     const handleDownload = (language: string) => {
         const files: Record<string, string> = {
             en: "../src/assets/files/CV_Juliano_en.pdf",
@@ -28,29 +31,11 @@ const About = () => {
                 <Carousel />
 
                 <article className="flex flex-col lg:w-3/5 gap-4 flex-1">
-                    <p className="text-justify text-lg">
-                        I've been passionate about computers since childhood. In
-                        high school, I discovered my true calling in software
-                        development.
-                    </p>
-                    <p className="text-justify text-lg">
-                        During my technical course in telecommunications, I won
-                        all project fairs as the firmware developer and
-                        participated in a hackathon, winning in one category. I
-                        also received an honor of merit for top grades.
-                    </p>
-                    <p className="text-justify text-lg">
-                        In my Software Engineering degree, my team won a project
-                        fair in "market viability," where I developed the
-                        firmware, AI, and mobile app. I later interned in
-                        development and worked for two years as a full-stack
-                        developer.
-                    </p>
-                    <p className="text-justify text-lg">
-                        In my free time, I enjoy gaming, reading good books, and
-                        exploring the geek universe. I'm a huge Star Wars fan,
-                        and Batman is my favorite hero.
-                    </p>
+                    {Array.from({ length: 4 }, (_, i) => (
+                        <p key={i} className="text-justify text-lg">
+                            {t(`about_${i + 1}`)}
+                        </p>
+                    ))}
                 </article>
             </div>
 
@@ -58,7 +43,7 @@ const About = () => {
                 className="btn btn-primary self-center text-lg text-white center mt-8 mb-6"
                 onClick={() => handleDownload("en")}
             >
-                Download CV
+                {t("about_download_btn")}
                 <Download />
             </button>
         </section>
