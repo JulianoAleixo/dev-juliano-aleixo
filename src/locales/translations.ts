@@ -23,6 +23,7 @@ const translations: Record<Language, Record<string, string>> = {
         summary_4: "Meu objetivo é escrever códigos que sejam ",
         summary_btn: "Vamos conversar!",
 
+        about_title: "Sobre mim",
         about_1:
             "Sou apaixonado por computadores desde criança. No ensino médio, descobri minha verdadeira vocação no desenvolvimento de software.",
         about_2:
@@ -54,6 +55,7 @@ const translations: Record<Language, Record<string, string>> = {
         summary_4: "My goal is to write code that is ",
         summary_btn: "Let's chat!",
 
+        about_title: "About me",
         about_1:
             "I've been passionate about computers since childhood. In high school, I discovered my true calling in software development.",
         about_2:

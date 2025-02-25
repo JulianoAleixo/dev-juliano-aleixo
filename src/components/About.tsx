@@ -22,12 +22,12 @@ const About = () => {
     };
 
     return (
-        <section className="px-4 lg:px-40 flex flex-col">
-            <h2 className="text-center text-primary text-2xl lg:text-3xl font-bold pb-8">
-                About me
+        <section className="px-4 lg:px-40 flex flex-col bg-base-200">
+            <h2 className="text-center text-primary text-2xl lg:text-3xl font-bold pb-8 mt-4">
+                {t("about_title")}
             </h2>
 
-            <div className="flex flex-col-reverse lg:flex-row lg:gap-8 items-center lg:items-start flex-1 justify-center">
+            <div className="flex flex-col-reverse lg:flex-row lg:gap-12 items-center lg:items-start flex-1 justify-center">
                 <Carousel />
 
                 <article className="flex flex-col lg:w-3/5 gap-4 flex-1">
