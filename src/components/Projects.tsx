@@ -2,45 +2,78 @@ import { Link } from "lucide-react";
 import MockupBrowser from "./MockupBrowser";
 import Slider from "./Slider";
 import { useEffect, useState } from "react";
+import { useLanguage } from "../context/LanguageContext";
 
 interface ProjectsProps {
     theme: string;
 }
 
-const projects = [
-    {
-        name: "Theme Changer DaisyUI",
-        description:
-            "Um site criativo feito para testar os temas da extensão do TailwindCSS, o DaisyUI.",
-        url: "https://theme-change-daisy-ui.vercel.app",
-        image: "theme-changer-daisyui",
-        technologies: [
-            "react",
-            "typescript",
-            "tailwindcss",
-            "vite",
-            "vercel",
-            "daisyui",
-        ],
-    },
-    {
-        name: "Node Agenda",
-        description:
-            "Um site feito para estudar a estrutura MVC usando Node.JS.",
-        url: "https://node-agenda.vercel.app",
-        image: "node-agenda",
-        technologies: [
-            "nodejs",
-            "javascript",
-            "ejs",
-            "bootstrap",
-            "vercel",
-            "mongodb",
-        ],
-    },
-];
-
 const Projects = ({ theme }: ProjectsProps) => {
+    const { t } = useLanguage();
+
+    const projects = [
+        {
+            name: "Theme Changer DaisyUI",
+            description:
+                t("project_1"),
+            url: "https://theme-change-daisy-ui.vercel.app",
+            image: "theme-changer-daisyui",
+            technologies: [
+                "react",
+                "typescript",
+                "tailwindcss",
+                "vite",
+                "vercel",
+                "daisyui",
+            ],
+        },
+        {
+            name: "Node Agenda",
+            description:
+                t("project_2"),
+            url: "https://node-agenda.vercel.app",
+            image: "node-agenda",
+            technologies: [
+                "nodejs",
+                "javascript",
+                "ejs",
+                "bootstrap",
+                "vercel",
+                "mongodb",
+            ],
+        },
+        {
+            name: "Consultório Dra. Maria Luiza Rennó",
+            description:
+                t("project_3"),
+            url: "https://dramarialuizarenno.com.br",
+            image: "dra-maria-luiza-renno",
+            technologies: [
+                "react",
+                "typescript",
+                "tailwindcss",
+                "vite",
+                "vercel",
+                "daisyui",
+            ],
+        },
+        {
+            name: "Dev Juliano Aleixo",
+            description:
+                t("project_4"),
+            url: "#",
+            image: "dev-juliano-aleixo",
+            technologies: [
+                "react",
+                "typescript",
+                "tailwindcss",
+                "vite",
+                "vercel",
+                "daisyui",
+            ],
+        },
+    ];
+
     const [isLargeScreen, setIsLargeScreen] = useState(false);
 
     useEffect(() => {
@@ -57,7 +90,7 @@ const Projects = ({ theme }: ProjectsProps) => {
     return (
         <div className="px-4 lg:px-40 min-h-full">
             <h2 className="text-center text-primary text-2xl lg:text-3xl font-bold pb-8">
-                Projects
+                {t("projects_title")}
             </h2>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
@@ -95,7 +128,7 @@ const Projects = ({ theme }: ProjectsProps) => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                Access
+                                {t("project_link_button")}
                                 <Link />
                             </a>
                         </div>

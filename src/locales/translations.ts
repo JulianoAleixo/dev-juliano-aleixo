@@ -23,6 +23,17 @@ const translations: Record<Language, Record<string, string>> = {
         summary_4: "Meu objetivo é escrever códigos que sejam ",
         summary_btn: "Vamos conversar!",
 
+        projects_title: "Meus Projetos",
+        project_1:
+            "Um site criativo feito para testar os temas da extensão do TailwindCSS, o DaisyUI. Feito em Typescript usando React e Vite.",
+        project_2:
+            "Um projeto criado para estudar o Node.js, usando pacotes como Express e MongoDB, com uma interface interativa para gerenciamento de agendas.",
+        project_3:
+            "Um site feito para o consultório médico da Dra. Maria Luiza Rennó. Criado usando Typescript e React, com um desenvolvimento 'mobile-first' para ser responsivo como foco principal.",
+        project_4:
+            "Meu portifólio pessoal. Feito para falar um pouco sobre meus projetos e minha jornada profissional. Tem um grande foco em UI e UX, responsividade e o uso de tecnologias modernas do mercado.",
+        project_link_button: "Acessar",
+
         about_title: "Sobre mim",
         about_1:
             "Sou apaixonado por computadores desde criança. No ensino médio, descobri minha verdadeira vocação no desenvolvimento de software.",
@@ -71,6 +82,17 @@ const translations: Record<Language, Record<string, string>> = {
         summary_3_3: ", but I have also worked on projects using ",
         summary_4: "My goal is to write code that is ",
         summary_btn: "Let's chat!",
+
+        projects_title: "My Projects",
+        project_1:
+            "A creative website made to test the themes of the TailwindCSS extension, DaisyUI. Built with TypeScript using React and Vite.",
+        project_2:
+            "A project created to study Node.js, using packages like Express and MongoDB, with an interactive interface for schedule management.",
+        project_3:
+            "A website developed for Dr. Maria Luiza Rennó's medical office. Created using TypeScript and React, following a 'mobile-first' approach for responsiveness as the main focus.",
+        project_4:
+            "My personal portfolio. Created to showcase my projects and professional journey. It has a strong focus on UI and UX, responsiveness, and the use of modern market technologies.",
+        project_link_button: "Access",
 
         about_title: "About me",
         about_1:

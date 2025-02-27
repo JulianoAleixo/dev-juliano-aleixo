@@ -64,13 +64,19 @@ const Hero = () => {
                             {t("hero_welcome")}
                         </span>
                     </p>
-                    <button className="btn btn-primary text-lg text-white p-6">
+                    <button
+                        onClick={(e) => handleScroll(e, "projects")}
+                        className="btn btn-primary text-lg text-white p-6"
+                    >
                         {t("hero_btn")}
                     </button>
                 </div>
             </div>
             <div className="flex justify-center self-end pb-6">
-                <span className="animate-bounce text-2xl cursor-pointer" onClick={(e) => handleScroll(e, "summary")}>
+                <span
+                    className="animate-bounce text-2xl cursor-pointer"
+                    onClick={(e) => handleScroll(e, "summary")}
+                >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="48"
