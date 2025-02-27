@@ -32,6 +32,23 @@ const translations: Record<Language, Record<string, string>> = {
         about_4:
             "No meu tempo livre, gosto de jogar, ler bons livros e explorar o universo geek. Sou um grande fã de Star Wars, e Batman é meu herói favorito.",
         about_download_btn: "Baixar CV",
+
+        journey_title: "Sobre Mim",
+        timeline_2020_title: "Ingresso na ETE FMC",
+        timeline_2020_desc:
+            "Iniciei minha jornada acadêmica na Escola Técnica de Eletrônica Francisco Moreira da Costa (ETE FMC), em Santa Rita do Sapucaí - MG, cursando o ensino médio integrado ao técnico. Neste ano, participei da minha primeira feira de projetos, a ProjETE, onde minha equipe conquistou os prêmios de Melhor Diário de Bordo e Melhor Projeto da Classe.",
+        timeline_2021_title: "Segunda participação na ProjETE",
+        timeline_2021_desc:
+            "No meu segundo ano na ETE, tive a oportunidade de participar novamente da ProjETE. Minha equipe se destacou mais uma vez, recebendo os prêmios de Melhor Projeto de Tecnologia Assistiva e 'Projeto Empreendedor', este último concedido pela FAI - Centro de Ensino Superior em Gestão, Tecnologia e Educação.",
+        timeline_2022_title: "Formação como Técnico em Telecomunicações",
+        timeline_2022_desc:
+            "No início do ano, atuei como desenvolvedor de projetos no Centro de Desenvolvimento da ETE (CEDEN), durante um estágio de verão. Além disso, participei de mais uma edição da ProjETE, na qual minha equipe foi premiada em quatro categorias: Melhor Projeto de IoT pelo Inatel e pela ETE, Melhor Apresentação Virtual e Melhor Apresentação em Inglês. Também tive minha primeira experiência em um Hackathon, conquistando a vitória em uma das categorias.",
+        timeline_2023_title: "Menção Honrosa e Início da Graduação",
+        timeline_2023_desc:
+            "Durante a colação de grau da ETE FMC, fui reconhecido com a Menção Honrosa por ter alcançado a maior pontuação entre todos os formandos do meu ano, independentemente do curso. Paralelamente, iniciei minha graduação em Engenharia de Software e ingressei como estagiário em desenvolvimento de software no Inatel, ampliando minha experiência prática na área.",
+        timeline_2024_title: "Primeira participação na FETIN",
+        timeline_2024_desc:
+            "Participei pela primeira vez da Feira Tecnológica do Inatel (FETIN), aprimorando o projeto desenvolvido no meu segundo ano de ETE. A nova versão contou com integração de Inteligência Artificial utilizando YOLOv8, um aplicativo móvel desenvolvido em React Native e um firmware bem estruturado. Como resultado, fui premiado com o primeiro lugar na categoria 'Viabilidade de Mercado' e também recebi o prêmio 'Soft Skills'.",
     },
     en: {
         projects_btn: "My Projects",
@@ -64,6 +81,24 @@ const translations: Record<Language, Record<string, string>> = {
         about_4:
             "In my free time, I enjoy gaming, reading good books, and exploring the geek universe. I'm a huge Star Wars fan, and Batman is my favorite hero.",
         about_download_btn: "Download CV",
+
+        journey_title: "My Journey",
+        timeline_2020_title: "Admission to ETE FMC",
+        timeline_2020_desc:
+            "I began my academic journey at the Francisco Moreira da Costa Technical School of Electronics (ETE FMC) in Santa Rita do Sapucaí - MG, attending high school integrated with technical education. This year, I participated in my first project fair, ProjETE, where my team won the awards for Best Logbook and Best Class Project.",
+        timeline_2021_title: "Second participation in ProjETE",
+        timeline_2021_desc:
+            "In my second year at ETE, I had the opportunity to participate in ProjETE again. My team stood out once more, receiving the awards for Best Assistive Technology Project and 'Entrepreneurial Project,' the latter granted by FAI - Higher Education Center in Management, Technology, and Education.",
+        timeline_2022_title: "Graduation as a Telecommunications Technician",
+        timeline_2022_desc:
+            "At the beginning of the year, I worked as a project developer at the ETE Development Center (CEDEN) during a summer internship. Additionally, I participated in another edition of ProjETE, where my team was awarded in four categories: Best IoT Project by Inatel and ETE, Best Virtual Presentation, and Best English Presentation. I also had my first experience in a Hackathon, winning in one of the categories.",
+        timeline_2023_title:
+            "Honorable Mention and Start of Undergraduate Studies",
+        timeline_2023_desc:
+            "During the ETE FMC graduation ceremony, I was recognized with an Honorable Mention for achieving the highest score among all graduates of my year, regardless of the course. At the same time, I began my undergraduate studies in Software Engineering and joined Inatel as a software development intern, expanding my practical experience in the field.",
+        timeline_2024_title: "First participation in FETIN",
+        timeline_2024_desc:
+            "I participated for the first time in the Inatel Technology Fair (FETIN), improving the project developed in my second year at ETE. The new version featured AI integration using YOLOv8, a mobile application developed in React Native, and a well-structured firmware. As a result, I was awarded first place in the 'Market Viability' category and also received the 'Soft Skills' award.",
     },
 };
 

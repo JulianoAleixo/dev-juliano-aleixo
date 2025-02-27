@@ -81,10 +81,14 @@ const Navbar = ({ theme, setTheme }: NavbarProps) => {
                             </a>
                         </li>
                         <li>
-                            <a>{t("about_btn")}</a>
+                            <a onClick={(e) => handleScroll(e, "about")}>
+                                {t("about_btn")}
+                            </a>
                         </li>
                         <li>
-                            <a>{t("journey_btn")}</a>
+                            <a onClick={(e) => handleScroll(e, "journey")}>
+                                {t("journey_btn")}
+                            </a>
                         </li>
                         <li>
                             <a>{t("skills_btn")}</a>
@@ -109,12 +113,17 @@ const Navbar = ({ theme, setTheme }: NavbarProps) => {
                         </a>
                     </li>
                     <li>
-                        <a className="btn btn-ghost rounded-btn text-lg">
+                        <a
+                            onClick={(e) => handleScroll(e, "about")}
+                            className="btn btn-ghost rounded-btn text-lg"
+                        >
                             {t("about_btn")}
                         </a>
                     </li>
                     <li>
-                        <a className="btn btn-ghost rounded-btn text-lg">
+                        <a 
+                            onClick={(e) => handleScroll(e, "journey")}
+                            className="btn btn-ghost rounded-btn text-lg">
                             {t("journey_btn")}
                         </a>
                     </li>

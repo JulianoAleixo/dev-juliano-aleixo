@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 @plugin "daisyui" {
     themes: forest;
 }
@@ -35,5 +36,31 @@
     --border: 1px;
     --depth: 0;
     --noise: 0;
-  }
-  
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.animate-from-left {
+    animation: slideInFromLeft 0.5s ease-out forwards;
+}
+.animate-from-right {
+    animation: slideInFromRight 0.5s ease-out forwards;
+}
