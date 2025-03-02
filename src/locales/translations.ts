@@ -44,7 +44,7 @@ const translations: Record<Language, Record<string, string>> = {
             "No meu tempo livre, gosto de jogar, ler bons livros e explorar o universo geek. Sou um grande fã de Star Wars, e Batman é meu herói favorito.",
         about_download_btn: "Baixar CV",
 
-        journey_title: "Sobre Mim",
+        journey_title: "Minha Jornada",
         timeline_2020_title: "Ingresso na ETE FMC",
         timeline_2020_desc:
             "Iniciei minha jornada acadêmica na Escola Técnica de Eletrônica Francisco Moreira da Costa (ETE FMC), em Santa Rita do Sapucaí - MG, cursando o ensino médio integrado ao técnico. Neste ano, participei da minha primeira feira de projetos, a ProjETE, onde minha equipe conquistou os prêmios de Melhor Diário de Bordo e Melhor Projeto da Classe.",
