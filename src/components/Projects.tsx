@@ -61,7 +61,7 @@ const Projects = ({ theme }: ProjectsProps) => {
             name: "Dev Juliano Aleixo",
             description:
                 t("project_4"),
-            url: "#",
+            url: "https://www.julianoaleixo.dev",
             image: "dev-juliano-aleixo",
             technologies: [
                 "react",
