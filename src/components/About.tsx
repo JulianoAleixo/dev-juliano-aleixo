@@ -32,7 +32,7 @@ const About = () => {
 
                 <article className="flex flex-col lg:w-3/5 gap-4 flex-1">
                     {Array.from({ length: 4 }, (_, i) => (
-                        <p key={i} className="text-justify text-lg">
+                        <p key={i} className="text-justify md:text-lg">
                             {t(`about_${i + 1}`)}
                         </p>
                     ))}

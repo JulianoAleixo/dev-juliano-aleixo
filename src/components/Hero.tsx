@@ -44,7 +44,7 @@ const Hero = () => {
     };
 
     return (
-        <div className="hero bg-base-200 min-h-full" id="hero">
+        <div className="hero bg-base-200 min-h-full -mt-4 md:-mt-0" id="hero">
             <div className="hero-content text-center">
                 <div className="max-w-lg">
                     <h1 className="text-4xl lg:text-6xl font-bold">
