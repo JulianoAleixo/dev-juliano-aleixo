@@ -5,6 +5,19 @@ import { CircleArrowDown } from "lucide-react";
 const Summary = () => {
     const { t, language } = useLanguage();
 
+    const handleScroll = (
+        event: React.MouseEvent<HTMLAnchorElement>,
+        sectionId: string
+    ) => {
+        event.preventDefault();
+        const sectionElement = document.querySelector(`#${sectionId}`);
+        if (sectionElement) {
+            sectionElement.scrollIntoView({
+                behavior: "smooth",
+            });
+        }
+    };
+
     return (
         <div className="hero bg-base-200 min-h-full py-4 lg:px-40" id="summary">
             <div className="border-y-3 border-base-100 lg:py-8">
@@ -16,7 +29,10 @@ const Summary = () => {
                     />
                     <div className="flex flex-col justify-between items-center w-56 lg:w-auto flex-1 h-full self-center">
                         <MockupCode key={language} />
-                        <a className="btn btn-primary gap-4 my-4 text-white text-base justify-between">
+                        <a
+                            onClick={(e) => handleScroll(e, "contacts")}
+                            className="btn btn-primary gap-4 my-4 text-white text-base justify-between"
+                        >
                             {t("summary_btn")}
                             <CircleArrowDown />
                         </a>

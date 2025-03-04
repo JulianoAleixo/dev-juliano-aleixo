@@ -8,6 +8,7 @@ import { LanguageProvider } from "./context/LanguageContext";
 import About from "./components/About";
 import Journey from "./components/Journey";
 import Skills from "./components/Skills";
+import Contacts from "./components/Contacts";
 
 const App = () => {
     const [theme, setTheme] = useState<string>(
@@ -33,8 +34,10 @@ const App = () => {
                     <About />
                     <div className="divider" id="journey" />
                     <Journey />
-                    <div className="divider" />
+                    <div className="divider" id="skills" />
                     <Skills />
+                    <div className="divider" id="contacts" />
+                    <Contacts />
                     <Footer />
                 </div>
             </div>

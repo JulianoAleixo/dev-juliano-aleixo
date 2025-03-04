@@ -76,22 +76,22 @@ const Navbar = ({ theme, setTheme }: NavbarProps) => {
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
                     >
                         <li>
-                            <a onClick={(e) => handleScroll(e, "projects")}>
+                            <a onClick={(e) => handleScroll(e, "projects")} className="text-[14px]">
                                 {t("projects_btn")}
                             </a>
                         </li>
                         <li>
-                            <a onClick={(e) => handleScroll(e, "about")}>
+                            <a onClick={(e) => handleScroll(e, "about")} className="text-[14px]">
                                 {t("about_btn")}
                             </a>
                         </li>
                         <li>
-                            <a onClick={(e) => handleScroll(e, "journey")}>
+                            <a onClick={(e) => handleScroll(e, "journey")} className="text-[14px]">
                                 {t("journey_btn")}
                             </a>
                         </li>
                         <li>
-                            <a onClick={(e) => handleScroll(e, "skills")}>
+                            <a onClick={(e) => handleScroll(e, "skills")} className="text-[14px]">
                                 {t("skills_btn")}
                             </a>
                         </li>

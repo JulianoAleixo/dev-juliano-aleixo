@@ -82,7 +82,15 @@ const translations: Record<Language, Record<string, string>> = {
         soft_creativity: "Criatividade",
         soft_problem_solving: "Resolução de problemas",
         soft_communication: "Comunicação",
-        skills_call_to_action: "Quer saber mais? Clique nos cards!"
+        skills_call_to_action: "Quer saber mais? Clique nos cards!",
+
+        contacts_title: "Contato",
+        contacts_text: "Estou online em:",
+        contacts_visit_profile: "Visitar Perfil",
+        contacts_send_email: "Mandar E-mail",
+        contacts_send_message: "Mandar Mensagem",
+
+        footer_text: "Copyright © 2025 - Todos os direitos reservados"
     },
     en: {
         projects_btn: "My Projects",
@@ -166,7 +174,15 @@ const translations: Record<Language, Record<string, string>> = {
         soft_creativity: "Creativity",
         soft_problem_solving: "Problem Solving",
         soft_communication: "Communication",
-        skills_call_to_action: "Want to know more? Click on the cards!"
+        skills_call_to_action: "Want to know more? Click on the cards!",
+
+        contacts_title: "Contacts",
+        contacts_text: "I'm Online at:",
+        contacts_visit_profile: "Visit Profile",
+        contacts_send_email: "Send E-mail",
+        contacts_send_message: "Send Message",
+
+        footer_text: "Copyright © 2025 - All right reserved"
     },
 };
 
