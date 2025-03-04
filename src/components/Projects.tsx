@@ -88,7 +88,7 @@ const Projects = ({ theme }: ProjectsProps) => {
     }, []);
 
     return (
-        <div className="px-4 lg:px-40 min-h-full">
+        <div className="px-4 lg:px-40">
             <h2 className="text-center text-primary text-2xl lg:text-3xl font-bold pb-8">
                 {t("projects_title")}
             </h2>
