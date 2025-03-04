@@ -20,14 +20,14 @@ const Summary = () => {
 
     return (
         <div className="hero bg-base-200 min-h-full py-4 lg:px-40" id="summary">
-            <div className="border-y-3 border-base-100 lg:py-8">
+            <div className="border-y-3 border-base-100 w-full lg:py-8">
                 <div className="hero-content w-full flex-col lg:flex-row-reverse gap-12 items-stretch">
                     <img
                         src="/img/profile_pic.JPG"
-                        className="max-w-56 lg:max-w-sm rounded-lg shadow-2xl mx-8 lg:w-1/4 object-cover"
+                        className="max-w-56 lg:max-w-sm rounded-lg shadow-2xl mx-auto lg:w-1/4 object-cover"
                         draggable="false"
                     />
-                    <div className="flex flex-col justify-between items-center w-56 lg:w-auto flex-1 h-full self-center">
+                    <div className="flex flex-col justify-between items-center w-auto mx-8 flex-1 h-full self-center">
                         <MockupCode key={language} />
                         <a
                             onClick={(e) => handleScroll(e, "contacts")}
