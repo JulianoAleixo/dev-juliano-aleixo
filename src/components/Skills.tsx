@@ -15,7 +15,7 @@ import {
 import Card from "./Card";
 import { useLanguage } from "../context/LanguageContext";
 
-export default function Skills() {
+const Skills = () => {
     const { t } = useLanguage();
 
     const technologies = [
@@ -113,3 +113,4 @@ export default function Skills() {
         </div>
     );
 }
+export default Skills;
