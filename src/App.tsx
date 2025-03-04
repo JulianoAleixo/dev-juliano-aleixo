@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import { LanguageProvider } from "./context/LanguageContext";
 import About from "./components/About";
 import Journey from "./components/Journey";
+import Skills from "./components/Skills";
 
 const App = () => {
     const [theme, setTheme] = useState<string>(
@@ -33,7 +34,7 @@ const App = () => {
                     <div className="divider" id="journey" />
                     <Journey />
                     <div className="divider" />
-                    {/* <Skills /> */}
+                    <Skills />
                     <Footer />
                 </div>
             </div>

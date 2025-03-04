@@ -107,7 +107,7 @@ const Projects = ({ theme }: ProjectsProps) => {
                         <div className="collapse-title lg:text-lg text-secondary font-semibold lg:px-10">
                             {project.name}
                         </div>
-                        <div className="collapse-content text-sm flex flex-col lg:px-10 overflow-auto">
+                        <div className="collapse-content text-sm flex flex-col lg:px-10 overflow-auto text-justify">
                             {project.description}
                             <MockupBrowser
                                 url={project.url}
