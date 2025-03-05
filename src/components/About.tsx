@@ -5,10 +5,12 @@ import { useLanguage } from "../context/LanguageContext";
 const About = () => {
     const { t } = useLanguage();
 
-    const handleDownload = (language: string) => {
+    const handleDownload = () => {
+        const language = localStorage.getItem("language") || "en";
+
         const files: Record<string, string> = {
-            en: "../src/assets/files/CV_Juliano_en.pdf",
-            pt: "../src/assets/files/document_pt-BR.pdf",
+            en: "files/CV_Juliano_en.pdf",
+            "pt-BR": "files/CV_Juliano_pt-br.pdf",
         };
 
         const filePath = files[language] || files["en"];
@@ -41,7 +43,7 @@ const About = () => {
 
             <button
                 className="btn btn-primary self-center text-lg text-white center mt-8 mb-6"
-                onClick={() => handleDownload("en")}
+                onClick={() => handleDownload()}
             >
                 {t("about_download_btn")}
                 <Download />
