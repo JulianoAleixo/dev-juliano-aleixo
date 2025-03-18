@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Analytics } from "@vercel/analytics/react"
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
@@ -22,6 +23,7 @@ const App = () => {
 
     return (
         <LanguageProvider>
+            <Analytics />
             <div className="h-screen flex flex-col">
                 <Navbar theme={theme} setTheme={setTheme} />
                 {/* Content */}
