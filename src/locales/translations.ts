@@ -84,6 +84,8 @@ const translations: Record<Language, Record<string, string>> = {
         soft_communication: "Comunicação",
         skills_call_to_action: "Quer saber mais? Clique nos cards!",
 
+        feedback_title: "Feedbacks",
+
         contacts_title: "Contato",
         contacts_text: "Estou online em:",
         contacts_visit_profile: "Visitar Perfil",
@@ -175,6 +177,8 @@ const translations: Record<Language, Record<string, string>> = {
         soft_problem_solving: "Problem Solving",
         soft_communication: "Communication",
         skills_call_to_action: "Want to know more? Click on the cards!",
+
+        feedback_title: "Feedbacks",
 
         contacts_title: "Contacts",
         contacts_text: "I'm Online at:",

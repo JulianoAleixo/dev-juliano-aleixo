@@ -5,7 +5,7 @@ const Contacts = () => {
     const { t } = useLanguage();
 
     return (
-        <section className="bg-base-100 mb-8">
+        <section className="bg-base-200 p-6 pb-8">
             <h2 className="text-center text-primary text-2xl lg:text-3xl font-bold pb-8">
                 {t("contacts_title")}
             </h2>
@@ -20,9 +20,9 @@ const Contacts = () => {
                     </span>
                     {t("contacts_text")}
                 </div>
-                <div className="border-y-3 border-base-200 py-8">
+                <div className="border-y-3 border-base-100 py-8">
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                        <div className="flex flex-col gap-6 p-8 justify-center items-center bg-base-200 rounded-xl">
+                        <div className="flex flex-col gap-6 p-8 justify-center items-center bg-base-100 rounded-xl">
                             <div className="flex gap-2 text-lg items-center justify-center">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ const Contacts = () => {
                                 {t("contacts_visit_profile")}
                             </a>
                         </div>
-                        <div className="flex flex-col gap-6 p-8 justify-center items-center bg-base-200 rounded-xl">
+                        <div className="flex flex-col gap-6 p-8 justify-center items-center bg-base-100 rounded-xl">
                             <div className="flex gap-2 text-lg items-center justify-center">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +68,7 @@ const Contacts = () => {
                                 {t("contacts_visit_profile")}
                             </a>
                         </div>
-                        <div className="flex flex-col gap-6 p-8 justify-center items-center bg-base-200 rounded-xl">
+                        <div className="flex flex-col gap-6 p-8 justify-center items-center bg-base-100 rounded-xl">
                             <div className="flex gap-2 text-lg items-center justify-center">
                                 <Mail />
                                 E-mail
@@ -82,7 +82,7 @@ const Contacts = () => {
                                 {t("contacts_send_email")}
                             </a>
                         </div>
-                        <div className="flex flex-col gap-6 p-8 justify-center items-center bg-base-200 rounded-xl">
+                        <div className="flex flex-col gap-6 p-8 justify-center items-center bg-base-100 rounded-xl">
                             <div className="flex gap-2 text-lg items-center justify-center">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"

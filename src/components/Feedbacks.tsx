@@ -1,41 +1,72 @@
+import { useLanguage } from "../context/LanguageContext";
 import FeedbackItem from "./FeedbackItem";
 
 const Feedbacks = () => {
-    const feedbacks = [
-        {
-            image: "https://img.daisyui.com/images/profile/demo/1@94.webp",
-            name: "Dua Lipa",
-            role: "Remaining Reason",
-            text: "Remaining Reason became an instant hit, praised for its haunting sound and emotional depth. A viral performance brought it widespread recognition, making it one of Dio Lupa’s most iconic tracks.",
-        },
-        {
-            image: "",
-            name: "Dua Lipa",
-            role: "Remaining Reason",
-            text: "Remaining Reason became an instant hit, praised for its haunting sound and emotional depth. A viral performance brought it widespread recognition, making it one of Dio Lupa’s most iconic tracks.",
-        },
-        {
-            image: "https://img.daisyui.com/images/profile/demo/1@94.webp",
-            name: "Dua Lipa",
-            role: "Remaining Reason",
-            text: "Remaining Reason became an instant hit, praised for its haunting sound and emotional depth. A viral performance brought it widespread recognition, making it one of Dio Lupa’s most iconic tracks.",
-        },
-        {
-            image: "https://img.daisyui.com/images/profile/demo/1@94.webp",
-            name: "Dua Lipa",
-            role: "Remaining Reason",
-            text: "Remaining Reason became an instant hit, praised for its haunting sound and emotional depth. A viral performance brought it widespread recognition, making it one of Dio Lupa’s most iconic tracks.",
-        },
-    ];
+    const { t, language } = useLanguage();
+
+    const feedbacks = {
+        en: [
+            {
+                image: "https://img.daisyui.com/images/profile/demo/1@94.webp",
+                name: "Dua Lipa",
+                role: "Remaining Reason",
+                text: "Remaining Reason became an instant hit, praised for its haunting sound and emotional depth. A viral performance brought it widespread recognition, making it one of Dio Lupa’s most iconic tracks.",
+            },
+            {
+                image: "https://img.daisyui.com/images/profile/demo/1@94.webp",
+                name: "Dua Lipa",
+                role: "Remaining Reason",
+                text: "Remaining Reason became an instant hit, praised for its haunting sound and emotional depth. A viral performance brought it widespread recognition, making it one of Dio Lupa’s most iconic tracks.",
+            },
+            {
+                image: "https://img.daisyui.com/images/profile/demo/1@94.webp",
+                name: "Dua Lipa",
+                role: "Remaining Reason",
+                text: "Remaining Reason became an instant hit, praised for its haunting sound and emotional depth. A viral performance brought it widespread recognition, making it one of Dio Lupa’s most iconic tracks.",
+            },
+            {
+                image: "https://img.daisyui.com/images/profile/demo/1@94.webp",
+                name: "Dua Lipa",
+                role: "Remaining Reason",
+                text: "Remaining Reason became an instant hit, praised for its haunting sound and emotional depth. A viral performance brought it widespread recognition, making it one of Dio Lupa’s most iconic tracks.",
+            },
+        ],
+        "pt-BR": [
+            {
+                image: "https://img.daisyui.com/images/profile/demo/1@94.webp",
+                name: "Dua Lipa",
+                role: "Remaining Reason",
+                text: "Remaining Reason became an instant hit, praised for its haunting sound and emotional depth. A viral performance brought it widespread recognition, making it one of Dio Lupa’s most iconic tracks.",
+            },
+            {
+                image: "https://img.daisyui.com/images/profile/demo/1@94.webp",
+                name: "Dua Lipa",
+                role: "Remaining Reason",
+                text: "Remaining Reason became an instant hit, praised for its haunting sound and emotional depth. A viral performance brought it widespread recognition, making it one of Dio Lupa’s most iconic tracks.",
+            },
+            {
+                image: "https://img.daisyui.com/images/profile/demo/1@94.webp",
+                name: "Dua Lipa",
+                role: "Remaining Reason",
+                text: "Remaining Reason became an instant hit, praised for its haunting sound and emotional depth. A viral performance brought it widespread recognition, making it one of Dio Lupa’s most iconic tracks.",
+            },
+            {
+                image: "https://img.daisyui.com/images/profile/demo/1@94.webp",
+                name: "Dua Lipa",
+                role: "Remaining Reason",
+                text: "Remaining Reason became an instant hit, praised for its haunting sound and emotional depth. A viral performance brought it widespread recognition, making it one of Dio Lupa’s most iconic tracks.",
+            },
+        ]
+    };
 
     return (
-        <section className="px-4 lg:px-40  flex flex-col bg-base-100 p-6">
+        <section className="px-4 lg:px-40  flex flex-col bg-base-100">
             <h2 className="text-center text-primary text-2xl lg:text-3xl font-bold pb-8">
-                Feedbacks
+                {t("feedback_title")}
             </h2>
 
             <ul className="list bg-base-200 rounded-box shadow-md">
-                {feedbacks.map((feedback, index) => (
+                {feedbacks[language].map((feedback, index) => (
                     <li className="list-row" key={index}>
                         <FeedbackItem
                             image={feedback.image}
