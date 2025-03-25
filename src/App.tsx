@@ -10,6 +10,7 @@ import About from "./components/About";
 import Journey from "./components/Journey";
 import Skills from "./components/Skills";
 import Contacts from "./components/Contacts";
+import Feedbacks from "./components/Feedbacks";
 
 const App = () => {
     const [theme, setTheme] = useState<string>(
@@ -38,6 +39,8 @@ const App = () => {
                     <Journey />
                     <div className="divider" id="skills" />
                     <Skills />
+                    <div className="divider" id="feedbacks" />
+                    <Feedbacks />
                     <div className="divider" id="contacts" />
                     <Contacts />
                     <Footer />
