@@ -30,6 +30,11 @@ const Timeline = () => {
             title: t("timeline_2024_title"),
             description: t("timeline_2024_desc"),
         },
+        {
+            year: "2025",
+            title: t("timeline_2025_title"),
+            description: t("timeline_2025_desc"),
+        },
     ];
 
     const elementsRef = useRef<HTMLDivElement[]>([]);

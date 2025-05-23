@@ -60,6 +60,9 @@ const translations: Record<Language, Record<string, string>> = {
         timeline_2024_title: "Primeira participação na FETIN",
         timeline_2024_desc:
             "Participei pela primeira vez da Feira Tecnológica do Inatel (FETIN), aprimorando o projeto desenvolvido no meu segundo ano de ETE. A nova versão contou com integração de Inteligência Artificial utilizando YOLOv8, um aplicativo móvel desenvolvido em React Native e um firmware bem estruturado. Como resultado, fui premiado com o primeiro lugar na categoria 'Viabilidade de Mercado' e também recebi o prêmio 'Soft Skills'.",
+        timeline_2025_title: "Trabalhando para a Europa",
+        timeline_2025_desc:
+            "No início deste ano, fui chamado a atuar como desenvolvedor full-stack na Redera Technologies, uma empresa que atende clientes na Europa, como o AgriMP em Portugal. Atuei no desenvolvimento de soluções que me permitiram aprimorar o Front-end com React, Vite e TypeScript, além de aprofundar meus conhecimentos em Back-end com APIs REST desenvolvidas em Flask. Também participei da minha primeira Game Jam promovida pelo Inatel, enfrentando o desafio de criar um jogo em apenas 36 horas com C# e Unity.",
 
         skills_title: "Minhas Habilidades",
         skills_languages: "Linguagens",
@@ -90,7 +93,7 @@ const translations: Record<Language, Record<string, string>> = {
         contacts_send_email: "Mandar E-mail",
         contacts_send_message: "Mandar Mensagem",
 
-        footer_text: "Copyright © 2025 - Todos os direitos reservados"
+        footer_text: "Copyright © 2025 - Todos os direitos reservados",
     },
     en: {
         projects_btn: "My Projects",
@@ -152,6 +155,9 @@ const translations: Record<Language, Record<string, string>> = {
         timeline_2024_title: "First participation in FETIN",
         timeline_2024_desc:
             "I participated for the first time in the Inatel Technology Fair (FETIN), improving the project developed in my second year at ETE. The new version featured AI integration using YOLOv8, a mobile application developed in React Native, and a well-structured firmware. As a result, I was awarded first place in the 'Market Viability' category and also received the 'Soft Skills' award.",
+        timeline_2025_title: "Working for Europe",
+        timeline_2025_desc:
+            "Earlier this year, I was invited to work as a full-stack developer at Redera Technologies, a company that serves clients in Europe, such as AgriMP in Portugal. I contributed to the development of solutions that allowed me to enhance my Front-end skills using React, Vite, and TypeScript, while also deepening my Back-end knowledge by building REST APIs with Flask. I also took part in my first Game Jam, organized by Inatel, where I faced the challenge of creating a game in just 36 hours using C# and Unity.",
 
         skills_title: "My Skills",
         skills_languages: "Languages",
@@ -182,7 +188,7 @@ const translations: Record<Language, Record<string, string>> = {
         contacts_send_email: "Send E-mail",
         contacts_send_message: "Send Message",
 
-        footer_text: "Copyright © 2025 - All right reserved"
+        footer_text: "Copyright © 2025 - All right reserved",
     },
 };
 
