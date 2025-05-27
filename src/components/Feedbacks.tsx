@@ -7,54 +7,20 @@ const Feedbacks = () => {
     const feedbacks = {
         en: [
             {
-                image: "https://img.daisyui.com/images/profile/demo/1@94.webp",
-                name: "Dua Lipa",
-                role: "Remaining Reason",
-                text: "Remaining Reason became an instant hit, praised for its haunting sound and emotional depth. A viral performance brought it widespread recognition, making it one of Dio Lupa’s most iconic tracks.",
-            },
-            {
-                image: "https://img.daisyui.com/images/profile/demo/1@94.webp",
-                name: "Dua Lipa",
-                role: "Remaining Reason",
-                text: "Remaining Reason became an instant hit, praised for its haunting sound and emotional depth. A viral performance brought it widespread recognition, making it one of Dio Lupa’s most iconic tracks.",
-            },
-            {
-                image: "https://img.daisyui.com/images/profile/demo/1@94.webp",
-                name: "Dua Lipa",
-                role: "Remaining Reason",
-                text: "Remaining Reason became an instant hit, praised for its haunting sound and emotional depth. A viral performance brought it widespread recognition, making it one of Dio Lupa’s most iconic tracks.",
-            },
-            {
-                image: "https://img.daisyui.com/images/profile/demo/1@94.webp",
-                name: "Dua Lipa",
-                role: "Remaining Reason",
-                text: "Remaining Reason became an instant hit, praised for its haunting sound and emotional depth. A viral performance brought it widespread recognition, making it one of Dio Lupa’s most iconic tracks.",
+                image: "/img/joao-pedro-profile-pic.jpg",
+                name: "João Pedro Santos",
+                role: "Developer",
+                text: "Juliano is someone I had the privilege of working with. Very charismatic and helpful, he would always seek to learn what he didn’t know, and made a point of sharing what he did. An extremely competent professional, especially when it comes to front-end. From coworker to lifelong friend!",
+                linkedin: "https://br.linkedin.com/in/joaopedrosantosdev",
             },
         ],
         "pt-BR": [
             {
-                image: "https://img.daisyui.com/images/profile/demo/1@94.webp",
-                name: "Dua Lipa",
-                role: "Remaining Reason",
-                text: "Remaining Reason became an instant hit, praised for its haunting sound and emotional depth. A viral performance brought it widespread recognition, making it one of Dio Lupa’s most iconic tracks.",
-            },
-            {
-                image: "https://img.daisyui.com/images/profile/demo/1@94.webp",
-                name: "Dua Lipa",
-                role: "Remaining Reason",
-                text: "Remaining Reason became an instant hit, praised for its haunting sound and emotional depth. A viral performance brought it widespread recognition, making it one of Dio Lupa’s most iconic tracks.",
-            },
-            {
-                image: "https://img.daisyui.com/images/profile/demo/1@94.webp",
-                name: "Dua Lipa",
-                role: "Remaining Reason",
-                text: "Remaining Reason became an instant hit, praised for its haunting sound and emotional depth. A viral performance brought it widespread recognition, making it one of Dio Lupa’s most iconic tracks.",
-            },
-            {
-                image: "https://img.daisyui.com/images/profile/demo/1@94.webp",
-                name: "Dua Lipa",
-                role: "Remaining Reason",
-                text: "Remaining Reason became an instant hit, praised for its haunting sound and emotional depth. A viral performance brought it widespread recognition, making it one of Dio Lupa’s most iconic tracks.",
+                image: "/img/joao-pedro-profile-pic.jpg",
+                name: "João Pedro Santos",
+                role: "Developer",
+                text: "Juliano é uma pessoa com quem tive o privilégio de trabalhar. Muito carismático e prestativo, o que ele não sabia, procurava saber; e o que sabia, fazia questão de compartilhar. Um profissional extremamente competente, principalmente quando o assunto é front-end. De colega de trabalho a amigo para a vida!",
+                linkedin: "https://br.linkedin.com/in/joaopedrosantosdev",
             },
         ]
     };
@@ -67,12 +33,13 @@ const Feedbacks = () => {
 
             <ul className="list bg-base-200 rounded-box shadow-md">
                 {feedbacks[language].map((feedback, index) => (
-                    <li className="list-row" key={index}>
+                    <li className="list-row p-6" key={index}>
                         <FeedbackItem
                             image={feedback.image}
                             name={feedback.name}
                             role={feedback.role}
                             text={feedback.text}
+                            linkedin={feedback.linkedin}
                         />
                     </li>
                 ))}
