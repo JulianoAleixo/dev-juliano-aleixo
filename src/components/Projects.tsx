@@ -14,8 +14,7 @@ const Projects = ({ theme }: ProjectsProps) => {
     const projects = [
         {
             name: "Theme Changer DaisyUI",
-            description:
-                t("project_1"),
+            description: t("project_1"),
             url: "https://theme-change-daisy-ui.vercel.app",
             image: "theme-changer-daisyui",
             technologies: [
@@ -29,8 +28,7 @@ const Projects = ({ theme }: ProjectsProps) => {
         },
         {
             name: "Node Agenda",
-            description:
-                t("project_2"),
+            description: t("project_2"),
             url: "https://node-agenda.vercel.app",
             image: "node-agenda",
             technologies: [
@@ -44,8 +42,7 @@ const Projects = ({ theme }: ProjectsProps) => {
         },
         {
             name: "Consultório Dra. Maria Luiza Rennó",
-            description:
-                t("project_3"),
+            description: t("project_3"),
             url: "https://dramarialuizarenno.com.br",
             image: "dra-maria-luiza-renno",
             technologies: [
@@ -59,8 +56,7 @@ const Projects = ({ theme }: ProjectsProps) => {
         },
         {
             name: "Dev Juliano Aleixo",
-            description:
-                t("project_4"),
+            description: t("project_4"),
             url: "https://www.julianoaleixo.dev",
             image: "dev-juliano-aleixo",
             technologies: [
@@ -75,6 +71,7 @@ const Projects = ({ theme }: ProjectsProps) => {
     ];
 
     const [isLargeScreen, setIsLargeScreen] = useState(false);
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     useEffect(() => {
         const checkScreenSize = () => {
@@ -97,40 +94,71 @@ const Projects = ({ theme }: ProjectsProps) => {
                 {projects.map((project, index) => (
                     <div
                         key={index}
-                        tabIndex={0}
-                        className={`border border-base-300 bg-base-200 ${
-                            isLargeScreen
-                                ? "collapse collapse-open"
-                                : "collapse collapse-arrow"
-                        }`}
+                        className="border border-base-300 bg-base-200 rounded-box overflow-hidden"
                     >
-                        <div className="collapse-title lg:text-lg text-secondary font-semibold lg:px-10">
+                        {/* HEADER */}
+                        <div
+                            className="lg:text-lg text-secondary font-semibold lg:px-10 px-4 py-4 cursor-pointer flex justify-between items-center"
+                            onClick={() =>
+                                !isLargeScreen &&
+                                setOpenIndex(openIndex === index ? null : index)
+                            }
+                        >
                             {project.name}
+
+                            {!isLargeScreen && (
+                                <svg
+                                    className={`w-5 h-5 transition-transform duration-300 ${
+                                        openIndex === index ? "rotate-180" : ""
+                                    }`}
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M19 9l-7 7-7-7"
+                                    />
+                                </svg>
+                            )}
                         </div>
-                        <div className="collapse-content text-sm flex flex-col lg:px-10 overflow-auto text-justify">
-                            {project.description}
-                            <MockupBrowser
-                                url={project.url}
-                                image={project.image}
-                            />
 
-                            <Slider
-                                theme={theme}
-                                images={[...project.technologies]}
-                                width={40}
-                                height={40}
-                                reverse
-                            />
+                        {/* CONTENT */}
+                        <div
+                            className={`transition-all duration-500 ease-in-out overflow-hidden ${
+                                isLargeScreen || openIndex === index
+                                    ? "max-h-[1000px] opacity-100"
+                                    : "max-h-0 opacity-0"
+                            }`}
+                        >
+                            <div className="text-sm flex flex-col lg:px-10 px-4 pb-6 text-justify">
+                                {project.description}
 
-                            <a
-                                className="btn btn-primary self-center text-lg text-white center mt-6"
-                                href={project.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                {t("project_link_button")}
-                                <Link />
-                            </a>
+                                <MockupBrowser
+                                    url={project.url}
+                                    image={project.image}
+                                />
+
+                                <Slider
+                                    theme={theme}
+                                    images={[...project.technologies]}
+                                    width={40}
+                                    height={40}
+                                    reverse
+                                />
+
+                                <a
+                                    className="btn btn-primary self-center text-lg text-white mt-6"
+                                    href={project.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {t("project_link_button")}
+                                    <Link />
+                                </a>
+                            </div>
                         </div>
                     </div>
                 ))}
