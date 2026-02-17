@@ -8,7 +8,7 @@ const translations: Record<Language, Record<string, string>> = {
         skills_btn: "Minhas Habilidades",
 
         hero_text: "Olá Mundo...",
-        hero_intro: "Sou Juliano, um Desenvolvedor Front-End.",
+        hero_intro: "Sou Juliano, um Desenvolvedor Full Stack.",
         hero_welcome: "Bem-vindo ao meu portfólio!",
         hero_btn: "Ver Projetos",
 
@@ -102,7 +102,7 @@ const translations: Record<Language, Record<string, string>> = {
         skills_btn: "My Skills",
 
         hero_text: "Hello World...",
-        hero_intro: "I'm Juliano, a Front-End Developer.",
+        hero_intro: "I'm Juliano, a Full Stack Developer.",
         hero_welcome: "Welcome to my portfolio!",
         hero_btn: "See Projects",
 

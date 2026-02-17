@@ -25,15 +25,15 @@ const skills = [
 const metaTags = {
     en: {
         title: "Dev Juliano Aleixo - Personal Portfolio",
-        description: "Portfolio of Juliano Aleixo, front-end developer. See my projects and skills in React, TypeScript, Vue.js and more.",
-        keywords: `Juliano Aleixo, Front-End Developer, Portfolio, ${skills.join(", ")}`,
+        description: "Portfolio of Juliano Aleixo, full stack developer. See my projects and skills in React, TypeScript, Vue.js and more.",
+        keywords: `Juliano Aleixo, Full Stack Developer, Portfolio, ${skills.join(", ")}`,
         image: "https://www.julianoaleixo.dev/img/dev-juliano-aleixo.png",
         url: "https://yourwebsite.com"
     },
     "pt-BR": {
-        title: "Dev Juliano Aleixo - Portfólio Front-End",
-        description: "Portfólio de Juliano Aleixo, desenvolvedor front-end. Veja meus projetos e habilidades em React, TypeScript, Vue.js e mais.",
-        keywords: `Juliano Aleixo, Desenvolvedor Front-End, Portfólio, ${skills.join(", ")}`,
+        title: "Dev Juliano Aleixo - Portfólio Full Stack",
+        description: "Portfólio de Juliano Aleixo, desenvolvedor full stack. Veja meus projetos e habilidades em React, TypeScript, Vue.js e mais.",
+        keywords: `Juliano Aleixo, Desenvolvedor Full Stack, Portfólio, ${skills.join(", ")}`,
         image: "https://www.julianoaleixo.dev/img/dev-juliano-aleixo.png",
         url: "https://yourwebsite.com"
     }
